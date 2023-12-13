@@ -15,6 +15,10 @@ export default function ({
     <>
       <div className="card  bg-base-100 shadow-xl">
         <div className="card-body">
+          <h1 className="text-xl text-right font-bold">
+            {questionCount + 1}/
+            <span className="text-2xl">{questions.length}</span>
+          </h1>
           <h2 className="card-title">
             {questionCount + 1}.{question?.question}
           </h2>
@@ -24,8 +28,8 @@ export default function ({
               onClick={() => handleOption(item)}
               className={
                 selectedOption === item
-                  ? "bg-sky-700 mt-3 p-2  text-left"
-                  : "cursor-pointer mt-3 border p-2 hover:bg-sky-700 text-left"
+                  ? "bg-gradient-to-r from-slate-900 to-black hover:text-white font-bold rounded-full mt-3 px-4 py-2 text-white  text-left"
+                  : "cursor-pointer mt-3 px-4 py-2 border hover:bg-gradient-to-r from-slate-900 to-black hover:text-white font-bold rounded-full text-left"
               }
               key={index}
             >
@@ -38,14 +42,14 @@ export default function ({
               onClick={handlePrevious}
               className={
                 questionCount === 0
-                  ? "btn btn-disabled" // Make sure this class is defined in your styles
-                  : "btn btn-success bg-green-700 text-white cursor-pointer"
+                  ? "border px-8 py-2 rounded-full border-black hover:bg-gradient-to-r from-slate-900 to-black cursor-pointer duration-500 hover:text-white font-bold btn-disabled"
+                  : "border px-8 py-2 rounded-full border-black hover:bg-gradient-to-r from-slate-900 to-black cursor-pointer duration-500 hover:text-white font-bold"
               }
             >
               Previous
             </div>
-            {questionCount === questions.length - 1 ? (
-              <button className="btn btn-success bg-green-700 text-white cursor-pointer">
+            {isSelected && questionCount === questions.length - 1 ? (
+              <button className="border px-8 py-2 rounded-full border-black hover:bg-gradient-to-r from-slate-900 to-black cursor-pointer duration-500 hover:text-white font-bold">
                 <Link onClick={handleSubmit}>Submit</Link>
               </button>
             ) : (
@@ -53,8 +57,8 @@ export default function ({
                 onClick={handleNext}
                 className={
                   !isSelected
-                    ? "btn btn-disabled" // Make sure this class is defined in your styles
-                    : "btn btn-success bg-green-700 text-white cursor-pointer"
+                    ? "border px-8 py-2 rounded-full border-black hover:bg-gradient-to-r from-slate-900 to-black cursor-pointer duration-500 hover:text-white font-bold btn-disabled" // Make sure this class is defined in your styles
+                    : "border px-8 py-2 rounded-full border-black hover:bg-gradient-to-r from-slate-900 to-black cursor-pointer duration-500 hover:text-white font-bold"
                 }
               >
                 Next

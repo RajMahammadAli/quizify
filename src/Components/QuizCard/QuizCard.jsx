@@ -61,11 +61,7 @@ export default function () {
 
   return (
     <>
-      <div>
-        <h1 className="text-center p-8 text-xl font-bold">Questions</h1>
-      </div>
-
-      <div className="w-[50%] grid grid-cols-1 mx-auto ">
+      <div className="w-[50%] grid grid-cols-1 mx-auto m-8">
         <Card
           question={question}
           handleNext={handleNext}

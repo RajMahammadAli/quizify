@@ -14,7 +14,10 @@ export default function () {
               this is result page {usersResult}/{questions?.length}
             </h1>
             <div className="flex justify-center items-center p-8">
-              <Link to="/" className="btn btn-primary">
+              <Link
+                to="/"
+                className="border px-8 py-2 rounded-full border-black hover:bg-gradient-to-r from-slate-900 to-black cursor-pointer duration-500 hover:text-white font-bold"
+              >
                 Reset
               </Link>
             </div>
