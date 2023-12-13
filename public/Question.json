@@ -1,0 +1,34 @@
+{
+  "questions": [
+    {
+      "question": "Which country is known as the Land of the Rising Sun?",
+      "options": ["China", "Japan", "South Korea", "Thailand"],
+      "correctAnswer": "Japan"
+    },
+    {
+      "question": "What is the largest ocean on Earth?",
+      "options": [
+        "Atlantic Ocean",
+        "Indian Ocean",
+        "Southern Ocean",
+        "Pacific Ocean"
+      ],
+      "correctAnswer": "Pacific Ocean"
+    },
+    {
+      "question": "Who wrote 'Romeo and Juliet'?",
+      "options": [
+        "Charles Dickens",
+        "William Shakespeare",
+        "Jane Austen",
+        "Mark Twain"
+      ],
+      "correctAnswer": "William Shakespeare"
+    },
+    {
+      "question": "In which year did World War I begin?",
+      "options": ["1914", "1916", "1918", "1920"],
+      "correctAnswer": "1914"
+    }
+  ]
+}
